@@ -56,7 +56,7 @@ De resulterade boxarna uppsamplas och läggs på originalbilden (query).
 
 Resultatet visas i bild nedan.
 
-![Detekterade förändringar](output/visual_result/6h_good_enough.png)
+![Detekterade förändringar](output/visual_results/6h_good_enough.png)
 
 Som synes detekteras samtliga fel men samma objekt markeras av flera boxar. Vissa fel ger upphov till flera fel, ex. det förflyttade lövet blir två fel då det är både ett "saknat objekt" (från originalpositionen) och ett nytt "objekt" (på nya positionen). För att motverka detta implementerade jag utöver grundfunktionaliteten in box_merging-logik samt en check om objekt har flyttats från en scen till en annan. Logiken är simpel, om boxarna är tillräckligt överlappande mergeas de ihop, eller om två boxar har samma storlek tillräckligt nära varandra anses de vara ett förflyttat objekt (lövet). Och genom att tweeka parametrarna kan man få ut exakt 6 boxar.
 
