@@ -1,0 +1,4 @@
+2026-01-09 10:28:32,182 - ERROR - Shape mismatch when setting query image:query shape=(640, 480), ref shape=(480, 640)
+2026-01-09 10:31:06,192 - ERROR - Shape mismatch when setting query image:query shape=(640, 480), ref shape=(480, 640)
+2026-01-09 11:34:50,088 - ERROR - Query and reference patches must be gray scale, got query=3, ref=3
+2026-01-09 13:52:11,566 - ERROR - Unknown edge detection method: 0
