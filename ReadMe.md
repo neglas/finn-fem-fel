@@ -60,7 +60,7 @@ Resultatet visas i bild nedan.
 
 Som synes detekteras samtliga fel men samma objekt markeras av flera boxar. Vissa fel ger upphov till flera fel, ex. det förflyttade lövet blir två fel då det är både ett "saknat objekt" (från originalpositionen) och ett nytt "objekt" (på nya positionen). För att motverka detta implementerade jag utöver grundfunktionaliteten in box_merging-logik samt en check om objekt har flyttats från en scen till en annan. Logiken är simpel, om boxarna är tillräckligt överlappande mergeas de ihop, eller om två boxar har samma storlek tillräckligt nära varandra anses de vara ett förflyttat objekt (lövet). Och genom att tweeka parametrarna kan man få ut exakt 6 boxar.
 
-![Detekterade förändringar efter boxmerging](output/visual_result/result_box_merging_reducing_overlap_thresh.png)
+![Detekterade förändringar efter boxmerging](output/visual_results/result_box_merging_reducing_overlap_thresh.png)
 
 Jag står dock fast vid min ursprungslösning är good enough. Givet att man inte vet hur många fel det är finns det en risk att man översamplar detektionerna.
 En annan möjlig, mer enkel lösning, skulle kunna vara att låta alla boxar utgöra en binär mask och dra ut kopplade komponenter från den, då skulle man få ut 8 komponenter. Det beror helt enkelt på om man är intresserade av "alla fel i ett område", eller "specifika positioner där fel finns", där jag valt det senare alternativet. Exempelvis är det inte klargjort ifall lövet räknas som ett eller två fel (annat än att uppgiften heter finn-sex-fel).
